@@ -68,6 +68,10 @@ export const GameSlot = ({
           p: 2,
           gap: 2,
           display: 'flex',
+          flexDirection: {
+            xs: 'column',
+            sm: 'row',
+          },
           cursor: 'grab',
           padding: '20px',
           border:
@@ -198,6 +202,10 @@ export const GameSlot = ({
       sx={{
         ...slotStyle,
         display: 'flex',
+                  flexDirection: {
+            xs: 'column',
+            sm: 'row',
+          },
         alignItems: 'flex-start',
         gap: 2,
         p: 1.5,

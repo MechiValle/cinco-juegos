@@ -162,7 +162,7 @@ export const Home = () => {
     <Container
       maxWidth='lg'
       sx={{
-        height: '100vh',
+        height: {xs: 'auto', md: "100vh"},
         display: 'flex',
         flexDirection: 'column',
         py: 2,

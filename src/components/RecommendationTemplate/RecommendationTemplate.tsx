@@ -71,7 +71,7 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              gridTemplateColumns: {sx: '1fr', sm: '1fr 1fr'},
               gridTemplateRows: '110px 110px auto',
               gap: 2,
             }}

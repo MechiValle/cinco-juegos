@@ -34,7 +34,7 @@ export const GameCard = ({ game, onSelect }: Props) => {
             display: '-webkit-box',
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical',
-            minHeight: 40,
+            minHeight: 20,
           }}
           noWrap
         >

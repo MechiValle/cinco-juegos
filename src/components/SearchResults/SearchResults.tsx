@@ -75,7 +75,7 @@ export const SearchResults = ({
         display: 'grid',
         gridTemplateColumns: {
           xs: 'repeat(2, 1fr)',
-          lg: 'repeat(2, 1fr)',
+          md: 'repeat(2, 1fr)',
         },
         gap: 2,
       }}
