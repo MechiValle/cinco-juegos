@@ -14,6 +14,7 @@ import type { Game } from '../types/game';
 import { AddGameModal } from '../components/AddGameModal/AddGameModal';
 import { DeleteGameModal } from '../components/DeleteGameModal/DeleteGameModal';
 import { toPng } from 'html-to-image';
+import { ExportImage } from '../components/ExportImage/ExportImage';
 
 export const Home = () => {
   const INITIAL_SLOTS: RecommendationSlots = {
@@ -25,7 +26,7 @@ export const Home = () => {
   };
 
   const templateRef = useRef<HTMLDivElement>(null);
-
+  const exportRef = useRef<HTMLDivElement>(null);
   const [search, setSearch] = useState('');
   const [slots, setSlots] = useState(INITIAL_SLOTS);
   const [draggedSlot, setDraggedSlot] = useState<SlotId | null>(null);
@@ -47,12 +48,12 @@ export const Home = () => {
   const { data: games = [], isLoading } = useGameSearch(debouncedSearch);
 
   const exportImage = async () => {
-    if (!templateRef.current) {
+    if (!exportRef.current) {
       return;
     }
 
     try {
-      const dataUrl = await toPng(templateRef.current, {
+      const dataUrl = await toPng(exportRef.current, {
         cacheBust: true,
         pixelRatio: 2,
       });
@@ -270,6 +271,22 @@ export const Home = () => {
         }}
         onConfirm={handleConfirmDelete}
       />
+
+      <Box
+        sx={{
+          position: 'fixed',
+          left: '-99999px',
+          top: 0,
+        }}
+      >
+        <div ref={exportRef}>
+          <ExportImage
+            title={title}
+            slots={slots}
+            featuredComment={featuredComment}
+          />
+        </div>
+      </Box>
     </Container>
   );
 };
