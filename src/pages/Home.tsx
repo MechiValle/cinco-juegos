@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import { Box, Container, Grid, Typography } from '@mui/material';
 
@@ -13,16 +13,19 @@ import type { RecommendationSlots, SlotId } from '../types/recommendation';
 import type { Game } from '../types/game';
 import { AddGameModal } from '../components/AddGameModal/AddGameModal';
 import { DeleteGameModal } from '../components/DeleteGameModal/DeleteGameModal';
-
-const INITIAL_SLOTS: RecommendationSlots = {
-  slot1: null,
-  slot2: null,
-  slot3: null,
-  slot4: null,
-  slot5: null,
-};
+import { toPng } from 'html-to-image';
 
 export const Home = () => {
+  const INITIAL_SLOTS: RecommendationSlots = {
+    slot1: null,
+    slot2: null,
+    slot3: null,
+    slot4: null,
+    slot5: null,
+  };
+
+  const templateRef = useRef<HTMLDivElement>(null);
+
   const [search, setSearch] = useState('');
   const [slots, setSlots] = useState(INITIAL_SLOTS);
   const [draggedSlot, setDraggedSlot] = useState<SlotId | null>(null);
@@ -42,6 +45,33 @@ export const Home = () => {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const debouncedSearch = useDebounce(search);
   const { data: games = [], isLoading } = useGameSearch(debouncedSearch);
+
+  const exportImage = async () => {
+    if (!templateRef.current) {
+      return;
+    }
+
+    try {
+      const dataUrl = await toPng(templateRef.current, {
+        cacheBust: true,
+        pixelRatio: 2,
+      });
+
+      const link = document.createElement('a');
+
+      link.download = `${title || 'my-5-games'}.png`;
+
+      link.href = dataUrl;
+
+      link.click();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const isTemplateComplete =
+    Object.values(slots).every((slot) => slot !== null) &&
+    title.trim().length > 0;
 
   const handleGameClick = (game: Game) => {
     setSelectedGame(game);
@@ -203,7 +233,10 @@ export const Home = () => {
             }}
           >
             <RecommendationTemplate
+              ref={templateRef}
               slots={slots}
+              onGenerate={exportImage}
+              canGenerate={isTemplateComplete}
               onDeleteRequest={handleDeleteRequest}
               title={title}
               onTitleChange={setTitle}
