@@ -68,6 +68,7 @@ export const GameSlot = ({
           p: 2,
           gap: 2,
           display: 'flex',
+          cursor: 'grab',
           padding: '20px',
           border:
             draggedSlot && draggedSlot !== slotKey
@@ -200,6 +201,7 @@ export const GameSlot = ({
         alignItems: 'flex-start',
         gap: 2,
         p: 1.5,
+        cursor: 'grab',
         border:
           draggedSlot && draggedSlot !== slotKey
             ? '2px dashed #7C4DFF'
