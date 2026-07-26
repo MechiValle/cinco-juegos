@@ -21,7 +21,7 @@ export const DeleteGameModal = ({ open, game, onClose, onConfirm }: Props) => {
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth='sm' fullWidth>
-      <DialogTitle>Eliminar juego</DialogTitle>
+      <DialogTitle sx={{color: '#000000'}}>Eliminar juego</DialogTitle>
 
       <DialogContent>
         <Typography>

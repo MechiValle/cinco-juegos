@@ -28,7 +28,7 @@ export const AddGameModal = ({
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth='sm' fullWidth>
-      <DialogTitle>Agregar juego</DialogTitle>
+      <DialogTitle sx={{color: '#000000'}}>Agregar juego</DialogTitle>
 
       <DialogContent>
         <Typography>
