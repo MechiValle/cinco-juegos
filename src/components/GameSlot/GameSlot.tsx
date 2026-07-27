@@ -204,10 +204,10 @@ export const GameSlot = ({
       sx={{
         ...slotStyle,
         display: 'flex',
-                  flexDirection: {
-            xs: 'column',
-            sm: 'row',
-          },
+        flexDirection: {
+          xs: 'column',
+          sm: 'row',
+        },
         alignItems: 'flex-start',
         gap: 2,
         p: 1.5,
@@ -262,6 +262,7 @@ export const GameSlot = ({
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            height: 'inherit',
 
             borderRadius: 2,
             overflow: 'hidden',

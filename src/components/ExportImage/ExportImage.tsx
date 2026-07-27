@@ -51,7 +51,7 @@ export const ExportImage = ({ title, slots, featuredComment }: Props) => {
               borderRadius: 4,
               overflow: 'hidden',
               color: '#1A1A1A',
-              bgcolor: '#FFFFFF',
+              bgcolor: '#ffddd2',
               boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
             }}
           >
@@ -91,7 +91,7 @@ export const ExportImage = ({ title, slots, featuredComment }: Props) => {
             flex: 1,
             borderRadius: 4,
             color: '#1A1A1A',
-            bgcolor: '#FFFFFF',
+            bgcolor: '#ffddd2',
             boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
             overflow: 'hidden',
             display: 'flex',
