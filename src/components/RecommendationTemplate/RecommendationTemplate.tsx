@@ -48,7 +48,7 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
       >
         <TextField
           fullWidth
-          label='Título'
+          label='Mi top 5'
           value={title}
           onChange={(event) => onTitleChange(event.target.value)}
           slotProps={{
@@ -56,7 +56,7 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
               maxLength: 40,
             },
           }}
-          helperText='40 caracteres máximo'
+          helperText='40 caracteres max.'
         />
 
         <Box

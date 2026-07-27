@@ -18,8 +18,8 @@ export const ExportImage = ({ title, slots, featuredComment }: Props) => {
       sx={{
         width: 1080,
         height: 1350,
-        bgcolor: '#FAFAFA',
-        color: '#1A1A1A',
+        bgcolor: '#1A1A1A',
+        color: '#FAFAFA',
         p: 5,
         boxSizing: 'border-box',
         display: 'flex',
@@ -49,6 +49,7 @@ export const ExportImage = ({ title, slots, featuredComment }: Props) => {
             sx={{
               borderRadius: 4,
               overflow: 'hidden',
+              color: '#1A1A1A',
               bgcolor: '#FFFFFF',
               boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
             }}
@@ -88,6 +89,7 @@ export const ExportImage = ({ title, slots, featuredComment }: Props) => {
           sx={{
             flex: 1,
             borderRadius: 4,
+            color: '#1A1A1A',
             bgcolor: '#FFFFFF',
             boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
             overflow: 'hidden',
@@ -111,6 +113,7 @@ export const ExportImage = ({ title, slots, featuredComment }: Props) => {
             sx={{
               p: 4,
               flex: 1,
+              color: '#1A1A1A',
             }}
           >
             <Typography variant='h4' sx={{ fontWeight: 800 }}>
