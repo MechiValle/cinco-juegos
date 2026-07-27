@@ -30,7 +30,7 @@ export const Home = () => {
   const [search, setSearch] = useState('');
   const [slots, setSlots] = useState(INITIAL_SLOTS);
   const [draggedSlot, setDraggedSlot] = useState<SlotId | null>(null);
-  const [title, setTitle] = useState('Mis 5 Preferidos');
+  const [title, setTitle] = useState('Juegos Preferidos');
 
   const [featuredComment, setFeaturedComment] = useState('');
 

@@ -18,7 +18,8 @@ export const ExportImage = ({ title, slots, featuredComment }: Props) => {
       sx={{
         width: 1080,
         height: 1350,
-        bgcolor: '#1A1A1A',
+        //bgcolor: '#023047',
+        background: 'linear-gradient(45deg, #023047 30%, #219ebc 90%)',
         color: '#FAFAFA',
         p: 5,
         boxSizing: 'border-box',
