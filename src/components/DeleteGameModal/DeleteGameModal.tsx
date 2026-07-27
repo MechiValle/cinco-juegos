@@ -30,9 +30,9 @@ export const DeleteGameModal = ({ open, game, onClose, onConfirm }: Props) => {
       </DialogContent>
 
       <DialogActions>
-        <Button onClick={onClose}>No</Button>
+        <Button sx={{color: '#e29578'}} onClick={onClose}>No</Button>
 
-        <Button color='error' variant='contained' onClick={onConfirm}>
+        <Button sx={{backgroundColor:'#e29578'}} variant='contained' onClick={onConfirm}>
           Si
         </Button>
       </DialogActions>

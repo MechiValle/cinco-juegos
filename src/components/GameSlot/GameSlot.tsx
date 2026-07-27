@@ -72,6 +72,8 @@ export const GameSlot = ({
             xs: 'column',
             sm: 'row',
           },
+          backgroundColor: '#ffddd2',
+          //background: 'linear-gradient(145deg, #e29578 30%, #ffddd2 90%)',
           cursor: 'grab',
           padding: '20px',
           border:
@@ -214,6 +216,8 @@ export const GameSlot = ({
           draggedSlot && draggedSlot !== slotKey
             ? '2px dashed #7C4DFF'
             : slotStyle.border,
+        backgroundColor: '#ffddd2',
+        //background: 'linear-gradient(145deg, #e29578 30%, #ffddd2 90%)',
       }}
       onDragOver={(event) => {
         event.preventDefault();

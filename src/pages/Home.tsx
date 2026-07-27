@@ -162,11 +162,12 @@ export const Home = () => {
     <Container
       maxWidth='lg'
       sx={{
-        height: {xs: 'auto', md: "100vh"},
+        height: { xs: 'auto', md: '100vh' },
         display: 'flex',
         flexDirection: 'column',
         py: 2,
-        backgroundColor: '#FAFAFA',
+        //backgroundColor: '#FAFAFA',
+        background: 'linear-gradient(45deg, #006d77 30%, #83c5be 90%)',
         color: '#000000',
       }}
     >
@@ -177,7 +178,7 @@ export const Home = () => {
           mb: 2,
         }}
       >
-        Elegí cinco juegos y armá tu lista personalizada
+        Cinco Juegos
       </Typography>
 
       <Box

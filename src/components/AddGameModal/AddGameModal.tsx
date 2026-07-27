@@ -43,12 +43,13 @@ export const AddGameModal = ({
       </DialogContent>
 
       <DialogActions>
-        <Button onClick={onClose}>No</Button>
+        <Button sx={{color: '#e29578'}} onClick={onClose}>No</Button>
 
         <Button
           variant='contained'
           onClick={onConfirm}
           disabled={!hasEmptySlot}
+          sx={{backgroundColor: '#e29578'}}
         >
           Si
         </Button>

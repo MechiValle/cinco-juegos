@@ -149,6 +149,8 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
               sx={{
                 mt: 2,
                 flexShrink: 0,
+                color: '#1A1A1A',
+                backgroundColor: '#e29578',
               }}
             >
               Generar Imagen

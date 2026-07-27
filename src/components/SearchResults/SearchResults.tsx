@@ -25,6 +25,7 @@ export const SearchResults = ({
           textAlign: 'center',
           border: '2px dashed #ddd',
           borderRadius: 3,
+          color: '#FAFAFA',
         }}
       >
         Buscá un juego para empezar

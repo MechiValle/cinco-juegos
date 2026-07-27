@@ -13,6 +13,7 @@ export const GameCard = ({ game, onSelect }: Props) => {
       onClick={() => onSelect(game)}
       sx={{
         cursor: 'pointer',
+        backgroundColor: '#FAFAFA',
         transition: '0.2s',
         '&:hover': {
           transform: 'translateY(-3px)',
@@ -35,6 +36,7 @@ export const GameCard = ({ game, onSelect }: Props) => {
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical',
             minHeight: 20,
+
           }}
           noWrap
         >
