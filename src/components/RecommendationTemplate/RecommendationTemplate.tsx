@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { Box, Button, TextField, Tooltip } from '@mui/material';
+import { Box, Button, Paper, TextField, Tooltip } from '@mui/material';
 import type { RecommendationSlots, SlotId } from '../../types/recommendation';
 
 import { GameSlot } from '../GameSlot/GameSlot';
@@ -46,30 +46,39 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
           minHeight: 0,
         }}
       >
-        <TextField
-          fullWidth
-          label='Mi top 5'
-          value={title}
-          onChange={(event) => onTitleChange(event.target.value)}
-          slotProps={{
-            htmlInput: {
-              maxLength: 40,
-            },
-          }}
-          helperText='40 caracteres max.'
+        <Paper
           sx={{
-            '& label.Mui-focused': {
-              color: '#1A1A1A',
-            },
-
-            '& .MuiOutlinedInput-root': {
-              '&.Mui-focused fieldset': {
-                borderColor: '#1A1A1A',
-              },
-            },
+            display: 'flex',
+            p: 1,
+            gap: 1,
+            backgroundColor: '#ffddd2',
+            padding: 2,
           }}
-        />
+        >
+          <TextField
+            fullWidth
+            label='Título'
+            value={title}
+            onChange={(event) => onTitleChange(event.target.value)}
+            slotProps={{
+              htmlInput: {
+                maxLength: 40,
+              },
+            }}
+            helperText='40 caracteres max.'
+            sx={{
+              '& label.Mui-focused': {
+                color: '#1A1A1A',
+              },
 
+              '& .MuiOutlinedInput-root': {
+                '&.Mui-focused fieldset': {
+                  borderColor: '#1A1A1A',
+                },
+              },
+            }}
+          />
+        </Paper>
         <Box
           sx={{
             flex: 1,
@@ -150,7 +159,11 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
             </Box>
           </Box>
         </Box>
-        <Tooltip title={canGenerate ? '' : 'Debes completar los 5 juegos'}>
+        <Tooltip
+          title={
+            canGenerate ? '' : 'Debés completar los 5 juegos y poner un título'
+          }
+        >
           <span>
             <Button
               fullWidth

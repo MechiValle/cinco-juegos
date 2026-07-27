@@ -30,7 +30,7 @@ export const Home = () => {
   const [search, setSearch] = useState('');
   const [slots, setSlots] = useState(INITIAL_SLOTS);
   const [draggedSlot, setDraggedSlot] = useState<SlotId | null>(null);
-  const [title, setTitle] = useState('Juegos Preferidos');
+  const [title, setTitle] = useState('Mi top 5');
 
   const [featuredComment, setFeaturedComment] = useState('');
 
@@ -176,6 +176,7 @@ export const Home = () => {
         sx={{
           fontWeight: 600,
           mb: 2,
+          color: {xs: '#1A1A1A', md:'#ffddd2'} ,
         }}
       >
         Cinco Juegos

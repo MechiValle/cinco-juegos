@@ -22,17 +22,16 @@ export const SearchBar = ({ value, onChange }: Props) => {
         placeholder='Buscar juegos...'
         onChange={(event) => onChange(event.target.value)}
         sx={{
+          '& label.Mui-focused': {
+            color: '#1A1A1A',
+          },
 
-    "& label.Mui-focused": {
-      color: "#1A1A1A"
-    },
-
-    "& .MuiOutlinedInput-root": {
-      "&.Mui-focused fieldset": {
-        borderColor: '#e29578'
-      }
-    }
-  }}
+          '& .MuiOutlinedInput-root': {
+            '&.Mui-focused fieldset': {
+              borderColor: '#e29578',
+            },
+          },
+        }}
       />
 
       <IconButton
