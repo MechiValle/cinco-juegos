@@ -57,6 +57,17 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
             },
           }}
           helperText='40 caracteres max.'
+          sx={{
+            '& label.Mui-focused': {
+              color: '#1A1A1A',
+            },
+
+            '& .MuiOutlinedInput-root': {
+              '&.Mui-focused fieldset': {
+                borderColor: '#1A1A1A',
+              },
+            },
+          }}
         />
 
         <Box
@@ -71,7 +82,7 @@ export const RecommendationTemplate = forwardRef<HTMLDivElement, Props>(
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: {sx: '1fr', sm: '1fr 1fr'},
+              gridTemplateColumns: { sx: '1fr', sm: '1fr 1fr' },
               gridTemplateRows: '110px 110px auto',
               gap: 2,
             }}

@@ -13,7 +13,7 @@ export const SearchBar = ({ value, onChange }: Props) => {
         display: 'flex',
         p: 1,
         gap: 1,
-        backgroundColor: '#FAFAFA',
+        backgroundColor: '#ffddd2',
       }}
     >
       <TextField
@@ -21,6 +21,18 @@ export const SearchBar = ({ value, onChange }: Props) => {
         value={value}
         placeholder='Buscar juegos...'
         onChange={(event) => onChange(event.target.value)}
+        sx={{
+
+    "& label.Mui-focused": {
+      color: "#1A1A1A"
+    },
+
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: '#e29578'
+      }
+    }
+  }}
       />
 
       <IconButton

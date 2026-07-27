@@ -13,7 +13,7 @@ export const GameCard = ({ game, onSelect }: Props) => {
       onClick={() => onSelect(game)}
       sx={{
         cursor: 'pointer',
-        backgroundColor: '#FAFAFA',
+        backgroundColor: '#ffddd2',
         transition: '0.2s',
         '&:hover': {
           transform: 'translateY(-3px)',
